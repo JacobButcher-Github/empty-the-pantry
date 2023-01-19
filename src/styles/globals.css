@@ -2,3 +2,64 @@
     display: flex;
     justify-content: space-between;
 }
+
+#search_block_front {
+    font-size: 10pt;
+    margin: auto;
+}
+
+.placeholder {
+    width: 720px;
+    border-collapse: collapse;
+    margin: 0px auto 8px auto;
+    padding: 5px;
+    text-align: center;
+}
+
+.meal_types {
+    margin: auto;
+}
+
+.cs {
+    user-select: none;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    height: 20px;
+    line-height: 20px;
+    font-size: 9pt;
+    border-radius: 0.1875rem;
+    color: #f1f1f1;
+    box-shadow: 0 1px 3px rgba(0,0,0,.3);
+    text-shadow: 2px 2px 3px rgba(0,0,0,.3);
+    width: 121px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#breakfast_button {
+    background: radial-gradient(#d3d09f, #e4ea1e);
+    border: 1px solid #c7bf07;
+}
+
+#lunch_button {
+    background: radial-gradient(#5dc13b, #14e723);
+    border: 1px solid #5dc13b;
+}
+
+#dinner_button {
+    background: radial-gradient(#da4242, #e85541);
+    border: 1px solid #fc4e4e;
+}
+
+#snack_button {
+    background: radial-gradient(#e78c1a, #fcb417);
+    border: 1px solid #e78c1a;
+}
+
+#desert_button {
+    background: radial-gradient(#8800c3, #9755f5);
+    border: 1px solid #8800c3;
+}
