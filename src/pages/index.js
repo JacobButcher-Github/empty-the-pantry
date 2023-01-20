@@ -55,15 +55,19 @@ export default function Home() {
             </tr>
             </tbody>
           </table>
-          <div id="search">
-            <input type="text" placeholder="Ingredient.."></input>
-            <select name='Amount'>
-              <option value="very_little">Very Little</option>
-              <option value="little">Little</option>
-              <option value="medium">Medium</option>
-              <option value="large">Large</option>
-              <option value="very_large">Very Large</option>
-            </select>
+          <div class="search_block">
+            <div class="search_bar">
+                <input type="text" placeholder="Ingredient.."></input>
+              </div>
+              <div class="selector_bar">
+                <select name='Amount'>
+                  <option value="very_little">Very Little</option>
+                  <option value="little">Little</option>
+                  <option value="medium">Medium</option>
+                  <option value="large">Large</option>
+                  <option value="very_large">Very Large</option>
+                </select>
+              </div>
           </div>
           <button type="button" id="add_igredient" onClick={Add_Search}>Add Ingredient</button>
         </div>

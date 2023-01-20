@@ -39,7 +39,22 @@
     cursor: pointer;
 }
 
-#search {
+.search_block{
+    display: flex;
+    width: 50%;
+    align-items: center;
+
+}
+
+.search_bar {
+    text-align: center;
+    flex: 1;
+    margin: 10px;
+}
+
+.selector_bar{
+    flex: 1;
+    margin: 10px;
     text-align: center;
 }
 
