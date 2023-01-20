@@ -5,23 +5,6 @@ import { Inter } from '@next/font/google';
 
 const inter = Inter({ subsets: ['latin'] })
 
-function Add_Search(){
-  const search = document.getElementById("search");
-  const root = createRoot(search);
-  root.render(
-  <>
-  <input type="text" placeholder="Ingredient.."></input>
-  <select name='Amount'>
-    <option value="very_little">Very Little</option>
-    <option value="little">Little</option>
-    <option value="medium">Medium</option>
-    <option value="large">Large</option>
-    <option value="very_large">Very Large</option>
-  </select>
-  </>
-);
-}
-
 export default function Home() {
   return (
     <>
@@ -55,7 +38,7 @@ export default function Home() {
             </tr>
             </tbody>
           </table>
-          <div class="search_block">
+          <div class="search_block" id="search_block">
             <div class="search_bar">
                 <input type="text" placeholder="Ingredient.."></input>
               </div>
@@ -74,4 +57,21 @@ export default function Home() {
         </main>
     </>
   )
+}
+
+function Add_Search(){
+  const search = document.getElementById('search_block');
+  const root = createRoot(search);
+  root.render(
+  <>
+  <input type="text" placeholder="Ingredient.."></input>
+  <select name='Amount'>
+    <option value="very_little">Very Little</option>
+    <option value="little">Little</option>
+    <option value="medium">Medium</option>
+    <option value="large">Large</option>
+    <option value="very_large">Very Large</option>
+  </select>
+  </>
+);
 }
