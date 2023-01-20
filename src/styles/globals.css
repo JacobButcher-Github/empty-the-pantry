@@ -39,6 +39,10 @@
     cursor: pointer;
 }
 
+#search {
+    text-align: center;
+}
+
 #breakfast_button {
     background: radial-gradient(#d3d09f, #e4ea1e);
     border: 1px solid #c7bf07;
@@ -59,7 +63,7 @@
     border: 1px solid #e78c1a;
 }
 
-#desert_button {
+#dessert_button {
     background: radial-gradient(#8800c3, #9755f5);
     border: 1px solid #8800c3;
 }
