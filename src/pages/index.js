@@ -3,10 +3,13 @@ import Link from 'next/link';
 import { createRoot } from 'react-dom/client';
 import { Inter } from '@next/font/google';
 import Add_Search_Bar from '../add_search_bar';
+import React from 'react';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const [ingredient_count, setIngredient] = React.useState(0);
+
   return (
     <>
       <Head>
@@ -26,24 +29,24 @@ export default function Home() {
               <Link href="/lists/ingredients.js">Ingredients</Link>
             </div>
           </div>
-          <div class="logo_holder">PLACEHOLDER</div>
-        <div id='search_block_front' class='placeholder'>
-          <table class="meal_types">
+          <div className="logo_holder">PLACEHOLDER</div>
+        <div id='search_block_front' className='placeholder'>
+          <table className="meal_types">
             <tbody>
             <tr>
-              <td><div id="breakfast_button" class="cs 1">Breakfast</div></td>
-              <td><div id="lunch_button" class="cs 2">Lunch</div></td>
-              <td><div id="dinner_button" class="cs 3">Dinner</div></td>
-              <td><div id="snack_button" class="cs 4">Snack</div></td>
-              <td><div id="dessert_button" class="cs 5">Dessert</div></td>
+              <td><div id="breakfast_button" className="cs 1">Breakfast</div></td>
+              <td><div id="lunch_button" className="cs 2">Lunch</div></td>
+              <td><div id="dinner_button" className="cs 3">Dinner</div></td>
+              <td><div id="snack_button" className="cs 4">Snack</div></td>
+              <td><div id="dessert_button" className="cs 5">Dessert</div></td>
             </tr>
             </tbody>
           </table>
-          <div class="search_block" id="search_block">
-            <div class="search_bar">
+          <div className="search_block" id="search_block">
+            <div className="search_bar">
                 <input type="text" placeholder="Ingredient.."></input>
               </div>
-              <div class="selector_bar">
+              <div className="selector_bar">
                 <select name='Amount'>
                   <option value="very_little">Very Little</option>
                   <option value="little">Little</option>
@@ -53,7 +56,10 @@ export default function Home() {
                 </select>
               </div>
           </div>
-          <button type="button" id="add_igredient" onClick={Add_Search_Bar}>Add Ingredient</button>
+          { [...Array(ingredient_count)].map((_, i) => <Add_Search_Bar key={i} />) }
+          <button type="button" id="add_igredient" onClick={() => setIngredient(ingredient_count + 1)}>
+            Add Ingredient
+          </button>
         </div>
         </main>
     </>
