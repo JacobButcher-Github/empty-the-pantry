@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { createRoot } from 'react-dom/client';
 import { Inter } from '@next/font/google';
+import Add_Search_Bar from '../add_search_bar';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -52,26 +53,9 @@ export default function Home() {
                 </select>
               </div>
           </div>
-          <button type="button" id="add_igredient" onClick={Add_Search}>Add Ingredient</button>
+          <button type="button" id="add_igredient" onClick={Add_Search_Bar}>Add Ingredient</button>
         </div>
         </main>
     </>
   )
-}
-
-function Add_Search(){
-  const search = document.getElementById('search_block');
-  const root = createRoot(search);
-  root.render(
-  <>
-  <input type="text" placeholder="Ingredient.."></input>
-  <select name='Amount'>
-    <option value="very_little">Very Little</option>
-    <option value="little">Little</option>
-    <option value="medium">Medium</option>
-    <option value="large">Large</option>
-    <option value="very_large">Very Large</option>
-  </select>
-  </>
-);
 }
