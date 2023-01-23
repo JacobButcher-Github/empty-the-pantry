@@ -42,7 +42,7 @@ export default function Home() {
             </tr>
             </tbody>
           </table>
-          <div className="search_block" id="search_block">
+          <div className="search_block">
             <div className="search_bar">
                 <input type="text" placeholder="Ingredient.."></input>
               </div>
