@@ -4,7 +4,7 @@ function Add_Search_Bar() {
     return(
         <div className="search_block">
             <div className="search_bar">
-                <input type="text" placeholder="Ingredient.."></input>
+                <input type="text" placeholder="Ingredient" size={67}></input>
               </div>
               <div className="selector_bar">
                 <select name='Amount'>

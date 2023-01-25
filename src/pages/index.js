@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { createRoot } from 'react-dom/client';
 import { Inter } from '@next/font/google';
 import Add_Search_Bar from '../add_search_bar';
 import React from 'react';
@@ -18,7 +17,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
         <main>
-          <div id='top_bar'>
+          <div className='top_bar'>
             <div>
               <Link href="/">Front</Link>
             </div>
@@ -30,21 +29,21 @@ export default function Home() {
             </div>
           </div>
           <div className="logo_holder">PLACEHOLDER</div>
-        <div id='search_block_front' className='placeholder'>
+        <form action="" method="get" className='search_block_front'>
           <table className="meal_types">
             <tbody>
             <tr>
-              <td><div id="breakfast_button" className="cs 1">Breakfast</div></td>
-              <td><div id="lunch_button" className="cs 2">Lunch</div></td>
-              <td><div id="dinner_button" className="cs 3">Dinner</div></td>
-              <td><div id="snack_button" className="cs 4">Snack</div></td>
-              <td><div id="dessert_button" className="cs 5">Dessert</div></td>
+              <td><div id="breakfast_button" className="cs 1" onClick={toggle_breakfast()}>Breakfast</div></td>
+              <td><div id="lunch_button" className="cs 2" onClick={toggle_lunch()}>Lunch</div></td>
+              <td><div id="dinner_button" className="cs 3" onClick={toggle_dinner()}>Dinner</div></td>
+              <td><div id="snack_button" className="cs 4" onClick={toggle_snack()}>Snack</div></td>
+              <td><div id="dessert_button" className="cs 5" onClick={toggle_dessert()}>Dessert</div></td>
             </tr>
             </tbody>
           </table>
           <div className="search_block">
             <div className="search_bar">
-                <input type="text" placeholder="Ingredient.."></input>
+                <input type="text" placeholder="Ingredient" size={67}></input>
               </div>
               <div className="selector_bar">
                 <select name='Amount'>
@@ -57,11 +56,30 @@ export default function Home() {
               </div>
           </div>
           { [...Array(ingredient_count)].map((_, i) => <Add_Search_Bar key={i} />) }
-          <button type="button" id="add_igredient" onClick={() => setIngredient(ingredient_count + 1)}>
-            Add Ingredient
-          </button>
-        </div>
+          <div className='button_array'>
+            <button type="button" id="add_igredient" onClick={() => setIngredient(ingredient_count + 1)}>
+              Add Ingredient
+            </button>
+            <button type="button">Advanced</button>
+            <button type="button">Search</button>
+          </div>
+        </form>
         </main>
     </>
   )
 }
+function toggle_breakfast() {
+ //TODO
+}
+function toggle_lunch() {
+  //TODO
+ }
+ function toggle_dinner() {
+  //TODO
+ }
+ function toggle_snack() {
+  //TODO
+ }
+ function toggle_dessert() {
+  //TODO
+ }
