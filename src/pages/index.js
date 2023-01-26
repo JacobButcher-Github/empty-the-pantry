@@ -60,7 +60,10 @@ export default function Home() {
             <button type="button" id="add_igredient" onClick={() => setIngredient(ingredient_count + 1)}>
               Add Ingredient
             </button>
-            <button type="button">Advanced</button>
+            <label class="switch">
+              <input type="checkbox"></input>
+              <span class="slider">This is all I have</span>
+            </label>
             <button type="button">Search</button>
           </div>
         </form>
