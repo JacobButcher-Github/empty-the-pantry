@@ -90,14 +90,10 @@
     width: 500px;
     height: auto;
     align-items: center;
-    padding: 2px 2px 2px;
+    padding: 2px;
     margin: auto;
 }
 
-.das_label {
-    display: flex;
-}
-
-.slider {
-    padding: 2px 2px 2px;
+.Lablio {
+    font-size: large;
 }
