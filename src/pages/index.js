@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { Inter } from '@next/font/google';
-import Add_Search_Bar from '../add_search_bar';
+import Add_Search_Bar from '../functions/add_search_bar';
 import React from 'react';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -60,9 +60,12 @@ export default function Home() {
             <button type="button" id="add_igredient" onClick={() => setIngredient(ingredient_count + 1)}>
               Add Ingredient
             </button>
-            <label class="switch">
+            <label className="switch">
+            <div className="das_label">
               <input type="checkbox"></input>
-              <span class="slider">This is all I have</span>
+              <h2>This is all I have</h2>
+              <span className="slider"></span>
+            </div>
             </label>
             <button type="button">Search</button>
           </div>
