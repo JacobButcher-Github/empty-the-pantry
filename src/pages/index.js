@@ -52,6 +52,7 @@ export default function Home() {
               </div>
               <div className="selector_bar">
                 <select name='Amount'>
+                  <option value="amount">Amount</option>
                   <option value="very_little">Very Little</option>
                   <option value="little">Little</option>
                   <option value="medium">Medium</option>
