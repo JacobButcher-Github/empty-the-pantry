@@ -3,6 +3,11 @@ import Link from 'next/link';
 import { Inter } from '@next/font/google';
 import Add_Search_Bar from '../functions/add_search_bar';
 import React from 'react';
+import Breakfast_Button from '@/functions/breakfast_button';
+import Lunch_Button from '@/functions/lunch_button';
+import Dinner_Button from '@/functions/dinner_button';
+import Snack_Button from '@/functions/snack_button';
+import Dessert_Button from '@/functions/dessert_button';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -33,11 +38,11 @@ export default function Home() {
           <table className="meal_types">
             <tbody>
             <tr>
-              <td><div id="breakfast_button" className="cs 1" onClick={toggle_breakfast()}>Breakfast</div></td>
-              <td><div id="lunch_button" className="cs 2" onClick={toggle_lunch()}>Lunch</div></td>
-              <td><div id="dinner_button" className="cs 3" onClick={toggle_dinner()}>Dinner</div></td>
-              <td><div id="snack_button" className="cs 4" onClick={toggle_snack()}>Snack</div></td>
-              <td><div id="dessert_button" className="cs 5" onClick={toggle_dessert()}>Dessert</div></td>
+              <td><Breakfast_Button /></td>
+              <td><Lunch_Button /></td>
+              <td><Dinner_Button /></td>
+              <td><Snack_Button /></td>
+              <td><Dessert_Button /></td>
             </tr>
             </tbody>
           </table>

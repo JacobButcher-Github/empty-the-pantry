@@ -1,9 +1,14 @@
-import React from 'react';
+import { useState } from 'react';
 
-function breakfast_button() {
+function Breakfast_Button() {
+    const [isBreakfast, setBreakfast] = useState(true);
+
     return(
-        <div id="breakfast_button" className="cs 1" onClick={toggle_breakfast()}>Breakfast</div>
-    )
+        <div id={isBreakfast ? "breakfast_selected" : "breakfast_unselected"} className="cs 1" 
+        onClick={() => setBreakfast(!isBreakfast)}>
+            Breakfast
+        </div>
+    );
 }
 
-export default breakfast_button;
+export default Breakfast_Button;

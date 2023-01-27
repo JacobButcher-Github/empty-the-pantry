@@ -59,34 +59,45 @@
     text-align: center;
 }
 
-#breakfast_button {
+#breakfast_selected {
     background: radial-gradient(#d3d09f, #e4ea1e);
     border: 1px solid #c7bf07;
-    opacity: .8;
+    opacity: 1;
+}
+#breakfast_unselected {
+    background: radial-gradient(#d3d09f, #e4ea1e);
+    border: 1px solid #c7bf07;
+    opacity: 0.5;
 }
 
-#lunch_button {
+#lunch_selected {
     background: radial-gradient(#5dc13b, #14e723);
     border: 1px solid #5dc13b;
-    opacity: .8;
+    opacity: 1;
+}
+
+#lunch_unselected {
+    background: radial-gradient(#5dc13b, #14e723);
+    border: 1px solid #5dc13b;
+    opacity: 0.5;
 }
 
 #dinner_button {
     background: radial-gradient(#da4242, #e85541);
     border: 1px solid #fc4e4e;
-    opacity: .8;
+    opacity: 1;
 }
 
 #snack_button {
     background: radial-gradient(#e78c1a, #fcb417);
     border: 1px solid #e78c1a;
-    opacity: .8;
+    opacity: 1;
 }
 
 #dessert_button {
     background: radial-gradient(#8800c3, #9755f5);
     border: 1px solid #8800c3;
-    opacity: .8;
+    opacity: 1;
 }
 
 .button_array {
