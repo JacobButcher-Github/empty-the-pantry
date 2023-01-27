@@ -1,13 +1,14 @@
-import React from 'react';
+import { useState } from 'react';
 
 function Snack_Button() {
-    return(
-        <div id="snack_button" className="cs 4" onClick={toggle_snack}>Snack</div>
-    );
-}
+    const [isSnack, setSnack] = useState(true);
 
-export async function toggle_snack() {
-    alert("WORK PLEASE");
+    return(
+        <div id={isSnack ? "snack_selected" : "snack_unselected"} className="cs 4" 
+        onClick={() => setSnack(!isSnack)}>
+            Snack
+        </div>
+    );
 }
 
 export default Snack_Button;

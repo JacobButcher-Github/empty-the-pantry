@@ -82,22 +82,40 @@
     opacity: 0.5;
 }
 
-#dinner_button {
+#dinner_selected {
     background: radial-gradient(#da4242, #e85541);
     border: 1px solid #fc4e4e;
     opacity: 1;
 }
 
-#snack_button {
+#dinner_unselected {
+    background: radial-gradient(#da4242, #e85541);
+    border: 1px solid #fc4e4e;
+    opacity: 0.5;
+}
+
+#snack_selected {
     background: radial-gradient(#e78c1a, #fcb417);
     border: 1px solid #e78c1a;
     opacity: 1;
 }
 
-#dessert_button {
+#snack_unselected {
+    background: radial-gradient(#e78c1a, #fcb417);
+    border: 1px solid #e78c1a;
+    opacity: 0.5;
+}
+
+#dessert_selected {
     background: radial-gradient(#8800c3, #9755f5);
     border: 1px solid #8800c3;
     opacity: 1;
+}
+
+#dessert_unselected {
+    background: radial-gradient(#8800c3, #9755f5);
+    border: 1px solid #8800c3;
+    opacity: 0.5;
 }
 
 .button_array {
