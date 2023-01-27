@@ -72,17 +72,17 @@ export default function Home() {
   )
 }
 function toggle_breakfast() {
- //TODO
+
 }
 function toggle_lunch() {
-  //TODO
+
  }
  function toggle_dinner() {
-  //TODO
+
  }
  function toggle_snack() {
-  //TODO
+
  }
  function toggle_dessert() {
-  //TODO
+
  }
