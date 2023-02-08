@@ -33,7 +33,6 @@ export default function Home() {
               <Link href="/lists/ingredients.js">Ingredients</Link>
             </div>
           </div>
-          <div className="logo_holder">PLACEHOLDER</div>
         <img className='banner'src="/banner.png"></img>
         <form action="" method="get" className='search_block_front'>
           <table className="meal_types">
