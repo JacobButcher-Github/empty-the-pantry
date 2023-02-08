@@ -131,3 +131,13 @@
 .all_I_got {
     font-size: 12pt;
 }
+
+.banner {
+    width: 500px;
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-bottom: 5px;
+}

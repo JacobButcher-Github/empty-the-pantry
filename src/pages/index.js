@@ -19,7 +19,7 @@ export default function Home() {
       <Head>
         <title>Empty the Pantry</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/care-it.ico" />
       </Head>
         <main>
           <div className='top_bar'>
@@ -34,6 +34,7 @@ export default function Home() {
             </div>
           </div>
           <div className="logo_holder">PLACEHOLDER</div>
+        <img className='banner'src="/banner.png"></img>
         <form action="" method="get" className='search_block_front'>
           <table className="meal_types">
             <tbody>
