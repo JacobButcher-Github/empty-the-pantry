@@ -77,18 +77,3 @@ export default function Home() {
     </>
   )
 }
-function toggle_breakfast() {
-
-}
-function toggle_lunch() {
-
- }
- function toggle_dinner() {
-
- }
- function toggle_snack() {
-
- }
- function toggle_dessert() {
-
- }
