@@ -12,7 +12,13 @@ import Dessert_Button from '@/functions/dessert_button';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const [ingredient_count, setIngredient] = React.useState(0);
+  const [ingredient_count, setIngredient] = React.useState([{name: "", select: ""}]);
+
+  function handleIngredientChange(i, e) {
+    const values = [...ingredient_count];
+    values[i].select = e.target.value;
+    setIngredient(values);
+  }
 
   return (
     <>
