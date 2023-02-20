@@ -48,7 +48,7 @@ export default function Home() {
           </table>
           <div className="search_block">
             <div className="search_bar">
-                <input type="text" placeholder="Ingredient" size={67}></input>
+                <input type="text" placeholder="Ingredient"></input>
               </div>
               <div className="selector_bar">
                 <select name='Amount'>
