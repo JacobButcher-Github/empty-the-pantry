@@ -20,7 +20,23 @@ export default function Home() {
     setIngredient(values);
   }
 
-  
+  function handleAmountChange(i, e) {
+    const values = [...ingredient_count];
+    values[i].select = e.target.value;
+    setIngredient(values);
+  }
+
+  function add_Ingredient() {
+    const values = [...ingredient_count];
+    values.push({ name: "", select: "" });
+    setIngredient(values);
+  }
+
+  function remove_Ingredient(i) {
+    const values = [...ingredient_count];
+    values.splice(i, 1);
+    setIngredient(values);
+  }
 
   return (
     <>
