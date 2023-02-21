@@ -71,21 +71,33 @@ export default function Home() {
             </tbody>
           </table>
           <div className="search_block">
-            <div className="search_bar">
-                <input type="text" placeholder="Ingredient"></input>
-              </div>
-              <div className="selector_bar">
-                <select name='Amount'>
-                  <option value="amount">Amount</option>
-                  <option value="very_little">Very Little</option>
-                  <option value="little">Little</option>
-                  <option value="medium">Medium</option>
-                  <option value="large">Large</option>
-                  <option value="very_large">Very Large</option>
-                </select>
-              </div>
+            {ingredient_count.map((input, index) => (
+            <div key={index}>
+            <input
+              type="text"
+              value={input.name}
+              onChange={(event) => handleInputChange(index, event)}
+            />
+            <select
+              value={input.select}
+              onChange={(event) => handleSelectChange(index, event)}
+            >
+              <option value="">Select an option</option>
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+              <option value="option3">Option 3</option>
+              <option value="option4">Option 4</option>
+              <option value="option5">Option 5</option>
+            </select>
+            <button type="button" onClick={() => handleRemoveFields(index)}>
+              Remove
+            </button>
           </div>
-          { [...Array(ingredient_count)].map((_, i) => <Add_Search_Bar key={i} />) }
+        ))}
+      <button type="button" onClick={() => handleAddFields()}>
+        Add More Fields
+      </button>
+          </div>
           <div className='button_array'>
             <button type="button" id="add_igredient" onClick={() => setIngredient(ingredient_count + 1)}>
               Add Ingredient
