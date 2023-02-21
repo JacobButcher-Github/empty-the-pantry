@@ -76,11 +76,11 @@ export default function Home() {
             <input
               type="text"
               value={input.name}
-              onChange={(event) => handleInputChange(index, event)}
+              onChange={(event) => handleIgredientChange(index, event)}
             />
             <select
               value={input.select}
-              onChange={(event) => handleSelectChange(index, event)}
+              onChange={(event) => handleAmountChange(index, event)}
             >
               <option value="">Select an option</option>
               <option value="option1">Option 1</option>
@@ -89,12 +89,12 @@ export default function Home() {
               <option value="option4">Option 4</option>
               <option value="option5">Option 5</option>
             </select>
-            <button type="button" onClick={() => handleRemoveFields(index)}>
+            <button type="button" onClick={() => remove_Ingredient(index)}>
               Remove
             </button>
           </div>
         ))}
-      <button type="button" onClick={() => handleAddFields()}>
+      <button type="button" onClick={() => add_Ingredient()}>
         Add More Fields
       </button>
           </div>
