@@ -82,20 +82,20 @@ export default function Home() {
               value={input.select}
               onChange={(event) => handleAmountChange(index, event)}
             >
-              <option value="">Select an option</option>
-              <option value="option1">Option 1</option>
-              <option value="option2">Option 2</option>
-              <option value="option3">Option 3</option>
-              <option value="option4">Option 4</option>
-              <option value="option5">Option 5</option>
+              <option value="">Amount</option>
+              <option value="option1">Very Small</option>
+              <option value="option2">Small</option>
+              <option value="option3">Medium</option>
+              <option value="option4">Large</option>
+              <option value="option5">Very Large</option>
             </select>
             <button type="button" onClick={() => remove_Ingredient(index)}>
-              Remove
+              Remove Ingredient
             </button>
           </div>
         ))}
       <button type="button" onClick={() => add_Ingredient()}>
-        Add More Fields
+        Add Ingredient
       </button>
           </div>
           <div className='button_array'>
