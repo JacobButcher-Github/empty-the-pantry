@@ -76,7 +76,7 @@ export default function Home() {
             <input
               type="text"
               value={input.name}
-              onChange={(event) => handleIgredientChange(index, event)}
+              onChange={(event) => handleIngredientChange(index, event)}
             />
             <select
               value={input.select}
@@ -94,12 +94,9 @@ export default function Home() {
             </button>
           </div>
         ))}
-      <button type="button" onClick={() => add_Ingredient()}>
-        Add Ingredient
-      </button>
           </div>
           <div className='button_array'>
-            <button type="button" id="add_igredient" onClick={() => setIngredient(ingredient_count + 1)}>
+            <button type="button" onClick={() => add_Ingredient()}>
               Add Ingredient
             </button>
             <div className='all_I_got'>
