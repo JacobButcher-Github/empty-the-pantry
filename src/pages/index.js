@@ -92,6 +92,7 @@ export default function Home() {
             <button type="button" onClick={() => remove_Ingredient(index)}>
               Remove Ingredient
             </button>
+            <br />
           </div>
         ))}
           </div>
