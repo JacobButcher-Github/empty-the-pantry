@@ -16,13 +16,13 @@ export default function Home() {
 
   function handleIngredientChange(i, e) {
     const values = [...ingredient_count];
-    values[i].select = e.target.value;
+    values[i].name = e.target.value;
     setIngredient(values);
   }
 
   function handleAmountChange(i, e) {
     const values = [...ingredient_count];
-    values[i].select = e.target.value;
+    values[i].name = e.target.value;
     setIngredient(values);
   }
 
@@ -92,7 +92,6 @@ export default function Home() {
             <button type="button" onClick={() => remove_Ingredient(index)}>
               Remove Ingredient
             </button>
-            <br />
           </div>
         ))}
           </div>
