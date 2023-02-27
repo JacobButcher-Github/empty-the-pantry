@@ -71,6 +71,7 @@ export default function Home() {
             </tbody>
           </table>
           <div className="search_block">
+          <div>
             {ingredient_count.map((input, index) => (
             <div key={index}>
             <input
@@ -105,6 +106,7 @@ export default function Home() {
             </div>
             <button type="submit">Search</button>
           </div>  
+          </div>
         </form>
         </main>
     </>
