@@ -73,7 +73,7 @@ export default function Home() {
           <div className="search_block">
           <div className="fields">
             {ingredient_count.map((input, index) => (
-            <div key={index}>
+            <div key={index} className="fields">
             <input
               type="text"
               value={input.name}
