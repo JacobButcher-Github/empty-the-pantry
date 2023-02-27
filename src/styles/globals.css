@@ -37,11 +37,8 @@
 }
 
 .search_block{
-    display: flex;
     align-items: center;
     margin: auto;
-    text-align: center;
-
 }
 
 .search_bar {
