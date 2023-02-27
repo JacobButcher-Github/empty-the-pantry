@@ -71,7 +71,7 @@ export default function Home() {
             </tbody>
           </table>
           <div className="search_block">
-          <div>
+          <div className="fields">
             {ingredient_count.map((input, index) => (
             <div key={index}>
             <input
