@@ -11,7 +11,7 @@ import Dessert_Button from '@/functions/dessert_button';
 import { createClient } from '@supabase/supabase-js'
 
 const supabaseUrl = 'https://wcyzjooraslkglaxwbkd.supabase.co'
-const supabaseKey = process.env.SUPABASE_KEY
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndjeXpqb29yYXNsa2dsYXh3YmtkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzQ4Njg5NzEsImV4cCI6MTk5MDQ0NDk3MX0.kA7a4uyD0VAbVg_NHxdskUYv6DWXwB6S_goHqEAvm9k"
 const supabase = createClient(supabaseUrl, supabaseKey)
 
 const inter = Inter({ subsets: ['latin'] })
