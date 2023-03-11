@@ -8,6 +8,11 @@ import Lunch_Button from '@/functions/lunch_button';
 import Dinner_Button from '@/functions/dinner_button';
 import Snack_Button from '@/functions/snack_button';
 import Dessert_Button from '@/functions/dessert_button';
+import { createClient } from '@supabase/supabase-js'
+
+const supabaseUrl = 'https://wcyzjooraslkglaxwbkd.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY
+const supabase = createClient(supabaseUrl, supabaseKey)
 
 const inter = Inter({ subsets: ['latin'] })
 
