@@ -43,6 +43,11 @@ export default function Home() {
     setIngredient(values);
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+
+  };
+
   return (
     <>
       <Head>
@@ -63,7 +68,7 @@ export default function Home() {
             </div>
           </div>
         <img className='banner'src="/banner.png"></img>
-        <form action="" method="get" className='search_block_front'>
+        <form action="" method="get" className='search_block_front' onSubmit={handleSubmit}>
           <table className="meal_types">
             <tbody>
             <tr>
