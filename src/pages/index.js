@@ -45,9 +45,39 @@ export default function Home() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    const {data, error} = await supabase
-      .from("recipes")
-      .select("name", "description", "image")
+    const searchQuery = ingredients.map((ingredient,index) => ({
+      ingredient: ingredient,
+      amount: amounts[index]
+    }));
+    const ingredientId = [];
+    for (let i = 0; i < searchQuery.length; i++){
+      const {data: ingredientsData, error: ingredientsError } = await supabase
+        .from('ingredient')
+        .select('id')
+        .eq('ingredient_name', searchQuery[i].ingredient)
+        .eq('amount', searchQuery[i].amount);
+      if(ingredientsData){
+        ingredientId.push(ingredientsData[0].id);
+      }
+      else{
+        console.error(ingredientsError);
+        return;
+      }
+      const { data: recipesData, error: recipesError } = await supabase
+        .from('recipes')
+        .select('name, description, image_url')
+        .in('id', recipeIds);
+      if (!recipesData) {
+        console.error(recipesError);
+        return;
+      }
+      const recipes = recipesData.map((recipeData) => ({
+        name: recipeData.name,
+        description: recipeData.description,
+        image: recipeData.image_url
+      }));
+      
+    }
   };
 
   return (
