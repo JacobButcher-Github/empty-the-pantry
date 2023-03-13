@@ -17,7 +17,7 @@ const supabase = createClient(supabaseUrl, supabaseKey)
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const [ingredient_count, setIngredient] = React.useState([{name: "", select: ""}]);
+  const [ingredient_count, setIngredient] = React.useState([{name: "", amount: ""}]);
 
   function handleIngredientChange(i, e) {
     const values = [...ingredient_count];
@@ -27,7 +27,7 @@ export default function Home() {
 
   function handleAmountChange(i, e) {
     const values = [...ingredient_count];
-    values[i].select = e.target.value;
+    values[i].amount = e.target.value;
     setIngredient(values);
   }
 
@@ -45,9 +45,9 @@ export default function Home() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    const searchQuery = ingredients.map((ingredient,index) => ({
+    const searchQuery = ingredient_count.map((ingredient,index) => ({
       ingredient: ingredient,
-      amount: amounts[index]
+      amount: ingredient.amount
     }));
     const ingredientId = [];
     for (let i = 0; i < searchQuery.length; i++){
@@ -74,7 +74,7 @@ export default function Home() {
       const recipes = recipesData.map((recipeData) => ({
         name: recipeData.name,
         description: recipeData.description,
-        image: recipeData.image_url
+        image: recipeData.image
       }));
       
     }
