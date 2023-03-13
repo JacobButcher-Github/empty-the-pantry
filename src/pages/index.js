@@ -43,9 +43,11 @@ export default function Home() {
     setIngredient(values);
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-
+    const {data, error} = await supabase
+      .from("recipes")
+      .select("name", "description", "image")
   };
 
   return (
