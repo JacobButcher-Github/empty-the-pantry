@@ -27,7 +27,7 @@ export default function Home() {
 
   function handleAmountChange(i, e) {
     const values = [...ingredient_count];
-    values[i].name = e.target.value;
+    values[i].select = e.target.value;
     setIngredient(values);
   }
 
