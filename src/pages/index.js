@@ -18,6 +18,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [ingredient_count, setIngredient] = React.useState([{name: "", amount: ""}]);
+  const [recipes, setRecipes] = React.useState([]);
 
   function handleIngredientChange(i, e) {
     const values = [...ingredient_count];
@@ -71,14 +72,18 @@ export default function Home() {
         console.error(recipesError);
         return;
       }
-      const recipes = recipesData.map((recipeData) => ({
+      setRecipes(recipesData.map((recipeData) => ({
         name: recipeData.name,
         description: recipeData.description,
         image: recipeData.image
-      }));
-      
+      })));
+      setRecipes(recipes);
     }
   };
+
+  React.useEffect(() => {
+    console.log("recipes changed", recipes);
+  }, [recipes]);
 
   return (
     <>
@@ -150,6 +155,13 @@ export default function Home() {
           </div>  
           </div>
         </form>
+        {recipes.map((recipe, index) => (
+      <div key={index}>
+        <h2>{recipe.name}</h2>
+        <p>{recipe.description}</p>
+        <img src={recipe.image} alt={recipe.name} />
+      </div>
+      ))}
         </main>
     </>
   )
