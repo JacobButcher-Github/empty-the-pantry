@@ -65,20 +65,34 @@ export default function Home() {
         console.error(ingredientsError);
         return;
       }
-      const { data: recipesData, error: recipesError } = await supabase
-        .from('recipes')
-        .select('name, description, image_url')
-        .in('id', recipe_id);
-      if (!recipesData) {
-        console.error(recipesError);
-        return;
-      }
-      setRecipes(recipesData.map((recipeData) => ({
-        name: recipeData.name,
-        description: recipeData.description,
-        image: recipeData.image
-      })));
-      setRecipes(recipes);
+    const recipeId = [];
+    const {data: recipesIds, error: recipeIdError } = await supabase
+      .from('recipe_ingredient')
+      .select('recipes_id')
+      .in('ingredient_id', ingredientId)
+    if(recipesIds){
+      recipeId.push(recipesIds[0].recipes_id);
+    }
+    else{
+      console.error(recipeIdError);
+      return;
+    }
+    const { data: recipesData, error: recipesError } = await supabase
+      .from('recipes')
+      .select('name, description, image')
+      .in('recipe_id', recipeId);
+    if (!recipesData) {
+      console.error(recipesError);
+      return;
+    }
+    console.log(recipeId);
+    console.log(recipesData);
+    setRecipes(recipesData.map((recipeData) => ({
+      name: recipeData.name,
+      description: recipeData.description,
+      image: recipeData.image
+    })));
+    setRecipes(recipes);
     }
   };
 
