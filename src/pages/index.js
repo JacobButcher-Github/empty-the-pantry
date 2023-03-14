@@ -53,9 +53,9 @@ export default function Home() {
     const ingredientId = [];
     for (let i = 0; i < searchQuery.length; i++){
       const {data: ingredientsData, error: ingredientsError } = await supabase
-        .from('ingredient')
-        .select('id')
-        .eq('ingredient_name', searchQuery[i].ingredient)
+        .from('ingredients')
+        .select('ingredient_id')
+        .eq('name', searchQuery[i].ingredient)
         .eq('amount', searchQuery[i].amount);
       if(ingredientsData){
         ingredientId.push(ingredientsData[0].id);
