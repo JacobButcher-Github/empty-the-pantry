@@ -133,11 +133,11 @@ export default function Home() {
               onChange={(event) => handleAmountChange(index, event)}
             >
               <option value="">Amount</option>
-              <option value="option1">Very Small</option>
-              <option value="option2">Small</option>
-              <option value="option3">Medium</option>
-              <option value="option4">Large</option>
-              <option value="option5">Very Large</option>
+              <option value="very small">Very Small</option>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+              <option value="very large">Very Large</option>
             </select>
             <button type="button" onClick={() => remove_Ingredient(index)}>
               Remove Ingredient
