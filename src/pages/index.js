@@ -92,7 +92,6 @@ export default function Home() {
       description: recipeData.description,
       image: recipeData.image
     })));
-    setRecipes(recipes);
     }
   };
 
