@@ -52,13 +52,15 @@ export default function Home() {
     }));
     const ingredientId = [];
     for (let i = 0; i < searchQuery.length; i++){
+      console.log("Search Query:  ", searchQuery[i]);
       const {data: ingredientsData, error: ingredientsError } = await supabase
         .from('ingredients')
         .select('ingredient_id')
         .eq('name', searchQuery[i].ingredient)
         .eq('amount', searchQuery[i].amount);
+      console.log("Ingredients Data: ", ingredientsData);
       if(ingredientsData){
-        ingredientId.push(ingredientsData[0].id);
+        ingredientId.push(ingredientsData[0].ingredient_id);
       }
       else{
         console.error(ingredientsError);
