@@ -47,18 +47,17 @@ export default function Home() {
   async function handleSubmit(event) {
     event.preventDefault();
     const searchQuery = ingredient_count.map((ingredient,index) => ({
-      ingredient: ingredient,
+      ingredient: ingredient.name,
       amount: ingredient.amount
     }));
     const ingredientId = [];
     for (let i = 0; i < searchQuery.length; i++){
-      console.log("Search Query:  ", searchQuery[i]);
       const {data: ingredientsData, error: ingredientsError } = await supabase
         .from('ingredients')
         .select('ingredient_id')
-        .eq('name', searchQuery[i].ingredient)
+        .ilike('name', searchQuery[i].ingredient)
         .eq('amount', searchQuery[i].amount);
-      console.log("Ingredients Data: ", ingredientsData);
+        console.log(searchQuery[i].ingredient);
       if(ingredientsData){
         ingredientId.push(ingredientsData[0].ingredient_id);
       }
@@ -69,7 +68,7 @@ export default function Home() {
       const { data: recipesData, error: recipesError } = await supabase
         .from('recipes')
         .select('name, description, image_url')
-        .in('id', recipeIds);
+        .in('id', recipe_id);
       if (!recipesData) {
         console.error(recipesError);
         return;
